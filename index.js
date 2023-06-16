@@ -32,4 +32,20 @@ app.get('/about', (req, res) => {
     res.render('about')
 })
 
+app.get('/products', (req, res) => {
+    res.render('products')
+})
+
+app.get('/add', (req, res) => {
+    res.render('add')
+})
+
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+
+app.get('/register', (req, res) => {
+    res.render('register')
+})
 app.listen(2008, () => {console.log( `server started ` )})
