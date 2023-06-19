@@ -1,13 +1,16 @@
 {
   "dependencies": {
+    "dotenv": "^16.2.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.7"
+    "express-handlebars": "^7.0.7",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.0"
   },
   "name": "express2",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
