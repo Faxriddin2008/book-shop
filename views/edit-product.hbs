@@ -1,0 +1,56 @@
+{{!-- <h1>Add product</h1> --}}
+<div class="mx-auto w-75">
+  <p class="fs-1">Edit book - {{product.title}}</p>
+  <form action="/edit-product/{{product._id}}" method="post">
+    <div class=" form-floating mb-3">
+      <input
+        type="text"
+        name="title"
+        class="form-control"
+        id="floatingInput"
+        {{!-- placeholder="name@example.com" --}}
+        value="{{product.title}}"
+      />
+      <label for="floatingInput">Title</label>
+    </div>
+    <div class=" form-floating mb-3">
+      <textarea
+        
+        name="description"
+        class="form-control"
+        {{!-- id="floatingInput" --}}
+        placeholder="name@example.com"
+        maxlength="200"
+        style="height: 100px;"
+      >{{product.description}}</textarea>
+      <label for="floatingInput">Description (200 ta belgidan iborat bo'lsin)</label>
+    </div>
+    <div class=" form-floating mb-3">
+      <input
+        value="{{product.image}}"
+        type="text"
+        name="image"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput">Image (link)</label>
+    </div>
+    <div class="form-floating">
+      
+
+      <input
+        value="{{product.price}}"
+        name="price"
+        type="number"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+
+      <label for="floatingPassword">Price ($)</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Edit</button>
+    <button  class="btn btn-primary mt-3"><a href="/products" class="text-decoration-none text-light">Cancel</a></button>
+  </form>
+</div>

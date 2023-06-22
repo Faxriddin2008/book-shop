@@ -1,1 +1,67 @@
-<h1>Products</h1>
+<h1>Books</h1>
+{{#if books}}
+    <div class="card_wrapper">
+  {{#each books}}
+
+    <div class="card" style="width: 19rem;">
+      <img src={{image}} class="" alt="..." />
+      <div class="card-body" style="height: 220px; ">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; height: 30px;"
+        >
+          <h3 class="card-title">{{title}}</h3>
+          <h5>{{price}}$</h5>
+        </div>
+        {{! <div class=""> }}
+        <p class="card-text">{{description}}</p>
+
+        {{! </div> }}
+        {{! <a href="#" class="btn btn-primary">Go somewhere</a> }}
+      </div>
+      <h5 style="margin-left: 20px;">{{createdAt}}</h5>
+      <div
+        class="btn-group card-footer container-fluid"
+        role="group"
+        aria-label="Basic outlined example "
+      >
+        <form action="/details/{{_id}}" method="get">
+          <button
+          type="submit"
+          style="border-radius: 5px 0px 0px 5px;"
+
+          class="btn btn-outline-secondary"
+          {{! style="border: 1px solid white;" }}
+          
+        > Details </button>
+        </form>
+
+        <button
+          type="button"
+          {{! style="border: 1px solid white;" }}
+          class="btn btn-outline-primary update_link"
+        ><i class="bx bxs-edit" {{! style="color:#335acb" }}></i>
+          <a
+            class="text-decoration-none"
+            {{!-- onmouseover="(function() {this.className += ' text-light'})()" --}}
+            href="/edit/{{_id}}"
+          >Update</a>
+        </button>
+       <form method="post" action="/delete/{{_id}}">
+         <button
+          type="submit"
+          style="border-radius: 0 5px 5px 0;"
+          {{! style="border: 1px solid white;" }}
+          class="btn btn-outline-danger"
+        ><i class="bx bxs-x-circle"></i>
+          Delete
+        </button>
+       </form>
+      </div>
+    </div>
+
+  {{/each}}
+</div>
+{{else}}
+
+<h4>There are no any books <a href="/add">Let's add</a></h4>
+{{/if}}

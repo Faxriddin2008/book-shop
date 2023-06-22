@@ -19,8 +19,11 @@
         class="form-control"
         {{!-- id="floatingInput" --}}
         placeholder="name@example.com"
+        maxlength="200"
+        style="height: 100px;"
+        
       ></textarea>
-      <label for="floatingInput">Description</label>
+      <label for="floatingInput">Description (200 ta belgidan iborat bo'lsin)</label>
     </div>
     <div class=" form-floating mb-3">
       <input
@@ -30,7 +33,7 @@
         id="floatingInput"
         placeholder="name@example.com"
       />
-      <label for="floatingInput">Image</label>
+      <label for="floatingInput">Image (link)</label>
     </div>
     <div class="form-floating">
       
@@ -44,8 +47,8 @@
         placeholder="Password"
       />
 
-      <label for="floatingPassword">Price</label>
+      <label for="floatingPassword">Price ($)</label>
     </div>
-    <button type="submit" class="btn btn-primary mt-3">Login</button>
+    <button type="submit" class="btn btn-primary mt-3">Add</button>
   </form>
 </div>

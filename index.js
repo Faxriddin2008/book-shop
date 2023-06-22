@@ -34,7 +34,7 @@ app.engine("hbs", hbs.engine);
 //   });
 
 const conn = mongoose
-  .connect("mongodb://127.0.0.1:27017/demo")
+  .connect("mongodb+srv://Faxriddin:favYWHoeNrcDaEZ3@cluster15272.zflhwbr.mongodb.net/test")
   .then((connection) => {
     console.log("Database connected");
     // console.log(db.collection);
@@ -64,6 +64,10 @@ async function get() {
   console.log(products);
 }
 
+
+export function details(){
+  console.log("heshtima");
+}
 // get();
 
 // console.log(users);
