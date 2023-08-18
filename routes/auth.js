@@ -17,8 +17,8 @@ const UserSchema = new Schema({
   
   const User = model("users", UserSchema);
 
-router.get('/login', (req, res) => {
-    res.render('login', {
+router.get("/login", (req, res) => {
+    res.render("login", {
         title: "Book Shop | Login",
         isLogin: true,
     })
