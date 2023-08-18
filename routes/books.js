@@ -12,7 +12,6 @@ const BookSchema = new Schema({
 const Book = model("books", BookSchema);
 
 router.get("/", async (req, res) => {
-  // console.log(products);
   res.render("index", {
     title: "Book Shop | Main",
   });
